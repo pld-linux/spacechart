@@ -2,7 +2,7 @@ Summary:	SpaceChart - a 3d map of the stars
 Summary(pl):	SpaceChart - trójwymiarowa mapa nieba
 Name:		spacechart
 Version:	0.9.2
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications/Science
 Group(pl):	X11/Aplikacje/Nauka
@@ -41,6 +41,7 @@ S³oñca.
 %setup -q
 
 %build
+autoconf
 %configure
 %{__make}
 
