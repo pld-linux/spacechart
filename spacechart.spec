@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Science
 Source0:	ftp://ftp.gnu.org/pub/gnu/spacechart/%{name}-%{version}.tar.gz
+# Source0-md5:	5d23778a92b3c4a1e843efc114d69f83
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://www.gnu.org/software/spacechart/
