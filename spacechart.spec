@@ -44,7 +44,7 @@ S³oñca.
 %setup -q
 
 %build
-autoconf
+%{__autoconf}
 %configure
 %{__make}
 
