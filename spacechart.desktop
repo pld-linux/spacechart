@@ -7,4 +7,5 @@ Icon=spacechart.png
 Terminal=false
 Type=Application
 Encoding=UTF-8
+Categories=GTK;GNOME;Education;Science;Astronomy;
 # vi: encoding=utf-8
