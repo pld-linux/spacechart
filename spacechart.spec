@@ -1,21 +1,19 @@
 Summary:	SpaceChart - a 3d map of the stars
 Summary(pl):	SpaceChart - trójwymiarowa mapa nieba
 Name:		spacechart
-Version:	0.9.2
-Release:	8
+Version:	0.9.5
+Release:	1
 License:	GPL
 Group:		X11/Applications/Science
-Source0:	http://zipi.fi.upm.es/~e970095/spacechart/download/%{name}-%(echo  %{version} | sed s/\\./_/g).tgz
+Source0:	ftp://ftp.gnu.org/pub/gnu/spacechart/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Source2:	%{name}.png
-Patch0:		%{name}-ac_fixes.patch
-URL:		http://zipi.fi.upm.es/~e970095/spacechart/
+URL:		http://www.gnu.org/software/spacechart/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 SpaceChart is a program for displaying maps of the stars in 3D and
@@ -41,7 +39,6 @@ S³oñca.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 rm -f missing
@@ -68,7 +65,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc README
+%doc README doc/coordinates.txt doc/sample-spacechartrc
+%{_sysconfdir}/spacechartrc
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
 %{_applnkdir}/Scientific/Astronomy/%{name}.desktop
