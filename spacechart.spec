@@ -8,12 +8,12 @@ Group:		X11/Applications/Science
 Source0:	http://zipi.fi.upm.es/~e970095/spacechart/download/%{name}-%(echo  %{version} | sed s/\\./_/g).tgz
 Source1:	%{name}.desktop
 Source2:	%{name}.png
+Patch0:		%{name}-ac_fixes.patch
 URL:		http://zipi.fi.upm.es/~e970095/spacechart/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel
-BuildRequires:	gtk+-devel >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -42,9 +42,14 @@ S³oñca.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+rm -f missing
+%{__gettextize}
+%{__aclocal} -I %{_aclocaldir}/gnome
 %{__autoconf}
+%{__automake}
 %configure
 %{__make}
 
@@ -57,10 +62,12 @@ install -d $RPM_BUILD_ROOT{%{_applnkdir}/Scientific,%{_pixmapsdir}}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Scientific
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc README
 %attr(755,root,root) %{_bindir}/*
