@@ -5,7 +5,7 @@ Version:	0.9.2
 Release:	6
 License:	GPL
 Group:		X11/Applications/Science
-Source0:	http://zipi.fi.upm.es/~e970095/spacechart/download/%{name}-0_9_2.tgz
+Source0:	http://zipi.fi.upm.es/~e970095/spacechart/download/%{name}-%(echo  %{version} | sed s/\\./_/g).tgz
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://zipi.fi.upm.es/~e970095/spacechart/
@@ -57,14 +57,12 @@ install -d $RPM_BUILD_ROOT{%{_applnkdir}/Science,%{_pixmapsdir}}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Science
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
-gzip -9nf README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
 %{_applnkdir}/Science/%{name}.desktop
