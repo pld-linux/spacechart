@@ -5,8 +5,6 @@ Version:	0.9.2
 Release:	4
 License:	GPL
 Group:		X11/Applications/Science
-Group(de):	X11/Applikationen/Wissenschaft
-Group(pl):	X11/Aplikacje/Nauka
 Source0:	http://zipi.fi.upm.es/~e970095/spacechart/download/%{name}-0_9_2.tgz
 Source1:	%{name}.desktop
 Source2:	%{name}.png
