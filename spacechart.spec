@@ -50,11 +50,11 @@ autoconf
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_applnkdir}/Science,%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_applnkdir}/Scientific,%{_pixmapsdir}}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Science
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Scientific
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 gzip -9nf README
@@ -67,5 +67,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
-%{_applnkdir}/Science/%{name}.desktop
+%{_applnkdir}/Scientific/%{name}.desktop
 %{_pixmapsdir}/*
