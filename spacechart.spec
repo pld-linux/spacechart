@@ -10,12 +10,12 @@ Group(pl):	X11/Aplikacje/Nauka
 Source0:	http://zipi.fi.upm.es/~e970095/spacechart/download/%{name}-0_9_2.tgz
 Source1:	%{name}.desktop
 URL:		http://zipi.fi.upm.es/~e970095/spacechart/
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-BuildRequires:	gettext-devel
-BuildRequires:	gtk+-devel >= 1.2.0
-BuildRequires:	gnome-libs-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
+BuildRequires:	gnome-libs-devel
+BuildRequires:	gtk+-devel >= 1.2.0
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 
