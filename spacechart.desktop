@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=SpaceChart 3D
 Comment=A 3d map of the stars
+Comment=Trójwymiarowa mapa gwiazd
 Exec=/usr/X11R6/bin/spacechart
 Icon=spacechart.png
 Terminal=0
