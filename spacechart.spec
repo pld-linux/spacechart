@@ -8,6 +8,7 @@ Group:		X11/Applications
 Group(de):	X11/Applikationen
 Group(pl):	X11/Aplikacje
 Source0:	%{name}-0_9_2.tgz
+Source1:	%{name}.desktop
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:	gettext-devel
 BuildRequires:	gtk+-devel >= 1.2.0
@@ -29,7 +30,13 @@ known stars within 25 parsecs of the Sun.
 %description -l pl
 SpaceChart jest programem, który wy¶wietla mapê nieba w trzech
 wymiarach oraz umo¿liwia jej obracanie wokó³ gwiazd. Za jego pomoc±
-mo¿na ogl±daæ tylko wybrany podzbiór gwiazd z danego pliku, a tak¿e ty
+mo¿na ograniczyæ ogl±dany zbiór gwiazd wzglêdem ich w³asno¶ci, a tak¿e
+odleg³o¶ci od centrum okna podgl±du.
+
+Z programem jest do³±czany plik gliese.dat, który zosta³ utworzony na
+podstawie katalogu Gliese Catalogue of Nearby Stars (trzecia wersja),
+który zawiera wszystkie znane gwiazdy w odleg³o¶ci 25 parseków od
+S³oñca.
 
 %prep
 %setup -q
@@ -45,6 +52,9 @@ rm -rf $RPM_BUILD_ROOT
 
 gzip -9nf README
 
+install -d $RPM_BUILD_ROOT%{_applnkdir}/Applications/
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Applications
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -53,3 +63,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}/*
+%{_applnkdir}/Applications/%{name}.desktop
