@@ -2,7 +2,7 @@ Summary:	SpaceChart - a 3d map of the stars
 Summary(pl):	SpaceChart - trójwymiarowa mapa nieba
 Name:		spacechart
 Version:	0.9.2
-Release:	6
+Release:	7
 License:	GPL
 Group:		X11/Applications/Science
 Source0:	http://zipi.fi.upm.es/~e970095/spacechart/download/%{name}-%(echo  %{version} | sed s/\\./_/g).tgz
@@ -50,11 +50,11 @@ S³oñca.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_applnkdir}/Science,%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_applnkdir}/Scientific,%{_pixmapsdir}}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Science
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Scientific
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
@@ -65,5 +65,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc README
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
-%{_applnkdir}/Science/%{name}.desktop
+%{_applnkdir}/Scientific/%{name}.desktop
 %{_pixmapsdir}/*
