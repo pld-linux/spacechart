@@ -5,6 +5,7 @@ Version:	0.9.2
 Release:	3
 License:	GPL
 Group:		X11/Applications/Science
+Group(de):	X11/Applikationen/Wissenschaft
 Group(pl):	X11/Aplikacje/Nauka
 Source0:	%{name}-0_9_2.tgz
 Source1:	%{name}.desktop
@@ -12,6 +13,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:	gettext-devel
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	gnome-libs-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
 
 %define		_prefix		/usr/X11R6
 
@@ -34,7 +37,7 @@ odleg³o¶ci od centrum okna podgl±du.
 
 Z programem jest do³±czany plik gliese.dat, który zosta³ utworzony na
 podstawie katalogu Gliese Catalogue of Nearby Stars (trzecia wersja),
-który zawiera wszystkie znane gwiazdy w odleg³o¶ci 25 parseków od
+który zawiera wszystkie znane gwiazdy w odleg³o¶ci do 25 parseków od
 S³oñca.
 
 %prep
