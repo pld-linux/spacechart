@@ -66,7 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc README doc/coordinates.txt doc/sample-spacechartrc
-%{_sysconfdir}/spacechartrc
+%config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/spacechartrc
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
 %{_applnkdir}/Scientific/Astronomy/%{name}.desktop
