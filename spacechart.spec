@@ -62,4 +62,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}/*
-%{_applnkdir}/Applications/%{name}.desktop
+%{_applnkdir}/Science/%{name}.desktop
