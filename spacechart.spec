@@ -9,7 +9,7 @@ Group(de):	X11/Applikationen/Wissenschaft
 Group(pl):	X11/Aplikacje/Nauka
 Source0:	http://zipi.fi.upm.es/~e970095/spacechart/download/%{name}-0_9_2.tgz
 Source1:	%{name}.desktop
-Source1:	%{name}.png
+Source2:	%{name}.png
 URL:		http://zipi.fi.upm.es/~e970095/spacechart/
 BuildRequires:	autoconf
 BuildRequires:	automake
