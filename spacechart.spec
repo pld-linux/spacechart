@@ -54,7 +54,8 @@ rm -f missing
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
@@ -67,7 +68,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc README doc/coordinates.txt doc/sample-spacechartrc
-%config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/spacechartrc
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/spacechartrc
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
 %{_desktopdir}/%{name}.desktop
