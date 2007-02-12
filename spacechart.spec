@@ -1,5 +1,5 @@
 Summary:	SpaceChart - a 3d map of the stars
-Summary(pl.UTF-8):   SpaceChart - trójwymiarowa mapa nieba
+Summary(pl.UTF-8):	SpaceChart - trójwymiarowa mapa nieba
 Name:		spacechart
 Version:	0.9.5
 Release:	2
