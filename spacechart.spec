@@ -1,5 +1,5 @@
 Summary:	SpaceChart - a 3d map of the stars
-Summary(pl):	SpaceChart - trójwymiarowa mapa nieba
+Summary(pl.UTF-8):   SpaceChart - trÃ³jwymiarowa mapa nieba
 Name:		spacechart
 Version:	0.9.5
 Release:	2
@@ -27,16 +27,16 @@ Included with the program is the file gliese.dat, which is based on
 the Gliese Catalogue of Nearby Stars, 3rd version, which includes all
 known stars within 25 parsecs of the Sun.
 
-%description -l pl
-SpaceChart jest programem, który wy¶wietla mapê nieba w trzech
-wymiarach oraz umo¿liwia jej obracanie wokó³ gwiazd. Za jego pomoc±
-mo¿na ograniczyæ ogl±dany zbiór gwiazd wzglêdem ich w³asno¶ci, a tak¿e
-odleg³o¶ci od centrum okna podgl±du.
+%description -l pl.UTF-8
+SpaceChart jest programem, ktÃ³ry wyÅ›wietla mapÄ™ nieba w trzech
+wymiarach oraz umoÅ¼liwia jej obracanie wokÃ³Å‚ gwiazd. Za jego pomocÄ…
+moÅ¼na ograniczyÄ‡ oglÄ…dany zbiÃ³r gwiazd wzglÄ™dem ich wÅ‚asnoÅ›ci, a takÅ¼e
+odlegÅ‚oÅ›ci od centrum okna podglÄ…du.
 
-Z programem jest do³±czany plik gliese.dat, który zosta³ utworzony na
+Z programem jest doÅ‚Ä…czany plik gliese.dat, ktÃ³ry zostaÅ‚ utworzony na
 podstawie katalogu Gliese Catalogue of Nearby Stars (trzecia wersja),
-który zawiera wszystkie znane gwiazdy w odleg³o¶ci do 25 parseków od
-S³oñca.
+ktÃ³ry zawiera wszystkie znane gwiazdy w odlegÅ‚oÅ›ci do 25 parsekÃ³w od
+SÅ‚oÅ„ca.
 
 %prep
 %setup -q
